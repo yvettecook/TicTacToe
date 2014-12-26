@@ -6,7 +6,8 @@ class Tictactoe(object):
         return self.board
 
     def place(self, row, column, mark):
-        self.board[row][column] = mark
+        if self.board[row][column] == None:
+            self.board[row][column] = mark
 
     def player_move(self, row, column):
         row -= 1
