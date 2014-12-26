@@ -1,6 +1,6 @@
 class Tictactoe(object):
     def __init__(self):
-        self.board = []
+        self.board = [[],[],[]]
 
     def board():
         return self.board
