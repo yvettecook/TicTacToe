@@ -35,6 +35,19 @@ def test_cannot_place_on_occupied_square():
     assert game.board[0][1] == "O"
     print "passed: cannot place on occupied square"
 
+def test_can_identify_horizontal_win():
+    wipe_board(game)
+    assert game.is_horizontal_win() == False
+    game.place(2,0,'X')
+    game.place(2,1,'X')
+    game.place(2,2,'X')
+    assert game.is_horizontal_win() == True
+    print "passed: horizontal win identified"
+
+def wipe_board(game):
+    game.board = [[None, None, None],[None, None, None],[None, None, None]]
+
+
 test_game_has_board()
 test_board_has_3_rows()
 test_row_has_3_squares()
@@ -42,3 +55,4 @@ test_board_can_place()
 test_player_can_take_move()
 test_computer_can_take_move()
 test_cannot_place_on_occupied_square()
+test_can_identify_horizontal_win()
