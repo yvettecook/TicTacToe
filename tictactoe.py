@@ -13,16 +13,7 @@ class Tictactoe(object):
         column -= 1
         self.place(row, column, 'X')
 
-
-
-# class Player(object):
-#     def __init__(self, game):
-#         self.game = game
-#
-#     def game():
-#         return self.game
-#
-#     # def move(self, row, column):
-#     #     row -= 1
-#     #     column -= 1
-#     #     self.game().place(row, column, 'X')
+    def computer_move(self, row, column):
+        row -= 1
+        column -= 1
+        self.place(row, column, 'O')

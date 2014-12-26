@@ -24,10 +24,14 @@ def test_player_can_take_move():
     assert game.board[0][0] == "X"
     print "passed: player can move"
 
-
+def test_computer_can_take_move():
+    game.computer_move(3,1)
+    assert game.board[2][0] == "O"
+    print "passed: computer can move"
 
 test_game_has_board()
 test_board_has_3_rows()
 test_row_has_3_squares()
 test_board_can_place()
 test_player_can_take_move()
+test_computer_can_take_move()
