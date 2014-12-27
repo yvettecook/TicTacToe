@@ -20,29 +20,26 @@ class Tictactoe(object):
         self.place(row, column, 'O')
 
     def is_horizontal_win(self):
-        results = []
-        for row in self.board:
-            result = self.all_same(row)
-            results.append(result)
-        return any(results)
+        rows = self.board
+        return self.win_in_array(rows)
 
     def is_vertical_win(self):
-        rearranged_board = self.switch_rows_and_columns()
-        results = []
-        for row in rearranged_board:
-            result = self.all_same(row)
-            results.append(result)
-        return any(results)
+        columns = self.switch_rows_and_columns()
+        return self.win_in_array(columns)
 
     def is_diagonal_win(self):
         diagonals = []
         diagonals.append([self.board[0][0], self.board[1][1], self.board[2][2]])
         diagonals.append([self.board[0][2], self.board[1][1], self.board[2][0]])
+        return self.win_in_array(diagonals)
+
+    def win_in_array(self, list):
         results = []
-        for row in diagonals:
-            result = self.all_same(row)
+        for each in list:
+            result = self.all_same(each)
             results.append(result)
         return any(results)
+
 
     def switch_rows_and_columns(self):
         results = []
