@@ -34,6 +34,16 @@ class Tictactoe(object):
             results.append(result)
         return any(results)
 
+    def is_diagonal_win(self):
+        diagonals = []
+        diagonals.append([self.board[0][0], self.board[1][1], self.board[2][2]])
+        diagonals.append([self.board[0][2], self.board[1][1], self.board[2][0]])
+        results = []
+        for row in diagonals:
+            result = self.all_same(row)
+            results.append(result)
+        return any(results)
+
     def switch_rows_and_columns(self):
         results = []
         all_columns = []
