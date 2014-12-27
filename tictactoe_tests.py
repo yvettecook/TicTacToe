@@ -20,7 +20,7 @@ def test_board_can_place():
     print "passed: board can place a move"
 
 def test_player_can_take_move():
-    game.player_move(1,1)
+    game.player_move(0,0)
     assert game.board[0][0] == "X"
     print "passed: player can move"
 
@@ -32,7 +32,7 @@ def test_computer_can_take_move():
 
 def test_cannot_place_on_occupied_square():
     game.place(0,1,'O')
-    game.player_move(1,2)
+    game.player_move(0,1)
     assert game.board[0][1] == "O"
     print "passed: cannot place on occupied square"
 
@@ -63,6 +63,10 @@ def test_can_identify_diagonal_win():
     assert game.is_diagonal_win() == True
     print "passed: diagonal win identified"
 
+def test_player_move_first():
+    assert game.turn == 'player'
+    print "passed: player move first"
+
 def wipe_board(game):
     game.board = [[None, None, None],[None, None, None],[None, None, None]]
 
@@ -77,3 +81,4 @@ test_cannot_place_on_occupied_square()
 test_can_identify_horizontal_win()
 test_can_identify_vertical_win()
 test_can_identify_diagonal_win()
+test_player_move_first()
