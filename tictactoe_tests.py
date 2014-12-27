@@ -25,12 +25,13 @@ def test_player_can_take_move():
     print "passed: player can move"
 
 def test_computer_can_take_move():
-    game.computer_move(3,1)
-    assert game.board[2][0] == "O"
+    wipe_board(game)
+    game.computer_move()
+    print game.board
     print "passed: computer can move"
 
 def test_cannot_place_on_occupied_square():
-    game.computer_move(1,2)
+    game.place(0,1,'O')
     game.player_move(1,2)
     assert game.board[0][1] == "O"
     print "passed: cannot place on occupied square"

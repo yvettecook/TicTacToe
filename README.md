@@ -10,6 +10,21 @@ Stage 2: Make the computer unbeatable.
 
 #### Context
 
-Firt attempt to build my own program in Python - so do forgive any ugliness!
+First attempt to build my own program in Python - so do forgive any ugliness!
 
 I started learning Python this week - doing this kata will help me put this learning into practice.
+
+#### Design Choices
+---
+
+Grid as an array of 3 arrays: [ [ x, o, o ], [ x, o, o ], [ o, x, x ] ]
+
+*With hindsight, a single array of 9 may have reduced complexity.*
+
+---
+
+Single class of game, rather than seperating out board, player, computer.
+
+*This was a conscious choice to focus on learning Python methods and syntax with a single class, rather than getting tangled in inter-class dependencies. Will use separate classes next time. Promise*
+
+---

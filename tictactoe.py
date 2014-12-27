@@ -1,3 +1,5 @@
+import random
+
 class Tictactoe(object):
     def __init__(self):
         self.board = [[None, None, None],[None, None, None],[None, None, None]]
@@ -14,10 +16,13 @@ class Tictactoe(object):
         column -= 1
         self.place(row, column, 'X')
 
-    def computer_move(self, row, column):
-        row -= 1
-        column -= 1
-        self.place(row, column, 'O')
+    def computer_move(self):
+        while True:
+            row = random.randrange(0,3)
+            column = random.randrange(0,3)
+            if self.board[row][column] == None:
+                self.place(row, column, 'O')
+                break
 
     def is_horizontal_win(self):
         rows = self.board
@@ -39,7 +44,6 @@ class Tictactoe(object):
             result = self.all_same(each)
             results.append(result)
         return any(results)
-
 
     def switch_rows_and_columns(self):
         results = []
