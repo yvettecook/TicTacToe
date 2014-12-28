@@ -14,6 +14,12 @@ First attempt to build my own program in Python - so do forgive any ugliness!
 
 I started learning Python this week - doing this kata will help me put this learning into practice.
 
+#### Tools
+
+* Python
+* Python `assert` for testing
+* Random Library
+
 #### Design Choices
 ---
 
