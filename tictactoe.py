@@ -3,7 +3,7 @@ import random
 class Tictactoe(object):
     def __init__(self):
         self.board = [[None, None, None],[None, None, None],[None, None, None]]
-        self.turn = 'player'
+
 
     def board():
         return self.board
@@ -61,3 +61,8 @@ class Tictactoe(object):
             return all(x == row[0] for x in row)
         else:
             return False
+
+    # def alternate_turn():
+    #     while True:
+    #         yield 'player'
+    #         yield 'computer'

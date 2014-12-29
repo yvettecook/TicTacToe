@@ -2,7 +2,7 @@
 
 #### *Coding Kata, tested and written in Python*
 
-Simple game where player place either a 'O' or a 'X' in a 3x3 grid. The player who succeeds in placing three marks in a horizontal, vertical, or diagonal row wins the game.
+Simple command line game where player place either a 'O' or a 'X' in a 3x3 grid. The player who succeeds in placing three marks in a horizontal, vertical, or diagonal row wins the game.
 
 Stage 1: Build a command-line playable game against the computer.
 
@@ -29,7 +29,7 @@ Grid as an array of 3 arrays: [ [ x, o, o ], [ x, o, o ], [ o, x, x ] ]
 
 ---
 
-Single class of game, rather than seperating out board, player, computer.
+Single class of game, rather than separating out board, player, computer.
 
 *This was a conscious choice to focus on learning Python methods and syntax with a single class, rather than getting tangled in inter-class dependencies. Will use separate classes next time. Promise*
 
