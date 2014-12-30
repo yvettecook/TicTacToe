@@ -4,7 +4,6 @@ class Tictactoe(object):
     def __init__(self):
         self.board = [[None, None, None],[None, None, None],[None, None, None]]
 
-
     def board():
         return self.board
 
@@ -22,6 +21,10 @@ class Tictactoe(object):
             if self.board[row][column] == None:
                 self.place(row, column, 'O')
                 break
+
+    def is_win(self):
+        if self.is_vertical_win() or self.is_horizontal_win() or self.is_diagonal_win():
+            return True
 
     def is_horizontal_win(self):
         rows = self.board
@@ -61,8 +64,3 @@ class Tictactoe(object):
             return all(x == row[0] for x in row)
         else:
             return False
-
-    # def alternate_turn():
-    #     while True:
-    #         yield 'player'
-    #         yield 'computer'
