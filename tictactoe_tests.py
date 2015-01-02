@@ -67,12 +67,6 @@ def test_can_identify_any_win():
     assert game.is_win() == True
     print "passed: one win command"
 
-def test_player_move_first():
-    assert game.turn == 'player'
-    print "passed: player move first"
-
-
-
 def wipe_board(game):
     game.board = [[None, None, None],[None, None, None],[None, None, None]]
 
@@ -88,5 +82,3 @@ test_can_identify_horizontal_win()
 test_can_identify_vertical_win()
 test_can_identify_diagonal_win()
 test_can_identify_any_win()
-test_player_move_first()
-test_computer_takes_turn_after_player()

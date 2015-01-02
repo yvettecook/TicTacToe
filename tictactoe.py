@@ -3,9 +3,9 @@ import random
 class Tictactoe(object):
     def __init__(self):
         self.board = [[None, None, None],[None, None, None],[None, None, None]]
-
-    def board():
-        return self.board
+    # 
+    # def board():
+    #     return self.board
 
     def place(self, row, column, mark):
         if self.board[row][column] == None:
