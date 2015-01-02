@@ -3,9 +3,6 @@ import random
 class Tictactoe(object):
     def __init__(self):
         self.board = [[None, None, None],[None, None, None],[None, None, None]]
-    # 
-    # def board():
-    #     return self.board
 
     def place(self, row, column, mark):
         if self.board[row][column] == None:
@@ -23,8 +20,7 @@ class Tictactoe(object):
                 break
 
     def is_win(self):
-        if self.is_vertical_win() or self.is_horizontal_win() or self.is_diagonal_win():
-            return True
+        return self.is_vertical_win() or self.is_horizontal_win() or self.is_diagonal_win():
 
     def is_horizontal_win(self):
         rows = self.board
