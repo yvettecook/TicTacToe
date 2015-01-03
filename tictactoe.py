@@ -6,24 +6,25 @@ class Tictactoe(object):
 
     def play(self):
         while self.is_win() is False:
-            for row in self.board:
-                print row
+            self.print_board()
             self.player_prompt()
             if self.is_win() is True:
                 break
             self.computer_move()
-        for row in self.board:
-            print row
+        self.print_board()
         print "Game over"
 
     def player_prompt(self):
         print "> Your move"
         print "> Input row number (0, 1 or 2)"
-        row = int(raw_input())
         print "> Input column number (0, 1 or 2)"
+        row = int(raw_input())
         column = int(raw_input())
         self.player_move(row, column)
 
+    def print_board(self):
+        for row in self.board:
+            print row
 
     def place(self, row, column, mark):
         if self.board[row][column] == None:

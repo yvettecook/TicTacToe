@@ -4,9 +4,9 @@
 
 Simple command line game where player place either a 'O' or a 'X' in a 3x3 grid. The player who succeeds in placing three marks in a horizontal, vertical, or diagonal row wins the game.
 
-Stage 1: Build a command-line playable game against the computer.
+- [x] Stage 1: Build a command-line playable game against the computer.
 
-Stage 2: Make the computer unbeatable.
+- [ ] Stage 2: Make the computer unbeatable.
 
 #### Context
 
@@ -20,7 +20,7 @@ I started learning Python this week - doing this kata will help me put this lear
 * Python `assert` for testing
 * Random Library
 
-#### Design Choices
+#### Design Choices & Learning
 ---
 
 Grid as an array of 3 arrays: [ [ x, o, o ], [ x, o, o ], [ o, x, x ] ]
@@ -35,15 +35,4 @@ Single class of game, rather than separating out board, player, computer.
 
 ---
 
-Touching on list comprehensions - read more!
-
-
-potentially refactored diagonals:
-
-````
-map(get_item, board, range(len(board)))
-map(get_item, board[::-1], range(len(board)))
-
-def get_item(row, index):
-    return row[index]
-````
+Have touched on list comprehensions, but need to read more!
