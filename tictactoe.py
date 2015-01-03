@@ -40,7 +40,7 @@ class Tictactoe(object):
             if self.board[row][column] == None:
                 self.place(row, column, 'O')
                 break
-
+    
     def is_win(self):
         return self.is_vertical_win() or self.is_horizontal_win() or self.is_diagonal_win()
 

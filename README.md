@@ -14,6 +14,16 @@ First attempt to build my own program in Python - so do forgive any ugliness!
 
 I started learning Python this week - doing this kata will help me put this learning into practice.
 
+#### To play
+
+1. `$ git clone git@github.com:yvettecook/TicTacToe.git`
+
+2. Change to the directory
+
+3. `$ python tictactoe.py`
+
+Enjoy!
+
 #### Tools
 
 * Python
@@ -31,7 +41,7 @@ Grid as an array of 3 arrays: [ [ x, o, o ], [ x, o, o ], [ o, x, x ] ]
 
 Single class of game, rather than separating out board, player, computer.
 
-*This was a conscious choice to focus on learning Python methods and syntax with a single class, rather than getting tangled in inter-class dependencies. Will use separate classes next time. Promise*
+*This was a conscious choice to focus on learning Python methods and syntax with a single class, rather than getting tangled in inter-class dependencies. Will use separate classes next time. Promise.*
 
 ---
 
