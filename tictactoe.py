@@ -4,6 +4,24 @@ class Tictactoe(object):
     def __init__(self):
         self.board = [[None, None, None],[None, None, None],[None, None, None]]
 
+    def play_game(self):
+        while self.is_win() is False:
+            for row in self.board:
+                print row
+            print "> Your move"
+            print "> Input row number (0, 1 or 2)"
+            row = int(raw_input())
+            print "> Input column number (0, 1 or 2)"
+            column = int(raw_input())
+            self.player_move(row, column)
+            if self.is_win() is True:
+                break
+            self.computer_move()
+        for row in self.board:
+            print row
+        print "Game over"
+
+
     def place(self, row, column, mark):
         if self.board[row][column] == None:
             self.board[row][column] = mark
@@ -20,11 +38,10 @@ class Tictactoe(object):
                 break
 
     def is_win(self):
-        return self.is_vertical_win() or self.is_horizontal_win() or self.is_diagonal_win():
+        return self.is_vertical_win() or self.is_horizontal_win() or self.is_diagonal_win()
 
     def is_horizontal_win(self):
-        rows = self.board
-        return self.win_in_array(rows)
+        return self.win_in_array(self.board)
 
     def is_vertical_win(self):
         columns = self.switch_rows_and_columns()

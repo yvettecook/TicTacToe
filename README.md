@@ -34,3 +34,16 @@ Single class of game, rather than separating out board, player, computer.
 *This was a conscious choice to focus on learning Python methods and syntax with a single class, rather than getting tangled in inter-class dependencies. Will use separate classes next time. Promise*
 
 ---
+
+Touching on list comprehensions - read more!
+
+
+potentially refactored diagonals:
+
+````
+map(get_item, board, range(len(board)))
+map(get_item, board[::-1], range(len(board)))
+
+def get_item(row, index):
+    return row[index]
+````
