@@ -4,22 +4,25 @@ class Tictactoe(object):
     def __init__(self):
         self.board = [[None, None, None],[None, None, None],[None, None, None]]
 
-    def play_game(self):
+    def play(self):
         while self.is_win() is False:
             for row in self.board:
                 print row
-            print "> Your move"
-            print "> Input row number (0, 1 or 2)"
-            row = int(raw_input())
-            print "> Input column number (0, 1 or 2)"
-            column = int(raw_input())
-            self.player_move(row, column)
+            self.player_prompt()
             if self.is_win() is True:
                 break
             self.computer_move()
         for row in self.board:
             print row
         print "Game over"
+
+    def player_prompt(self):
+        print "> Your move"
+        print "> Input row number (0, 1 or 2)"
+        row = int(raw_input())
+        print "> Input column number (0, 1 or 2)"
+        column = int(raw_input())
+        self.player_move(row, column)
 
 
     def place(self, row, column, mark):
@@ -77,3 +80,6 @@ class Tictactoe(object):
             return all(x == row[0] for x in row)
         else:
             return False
+
+game = Tictactoe()
+game.play()
